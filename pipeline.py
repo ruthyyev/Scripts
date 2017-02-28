@@ -2,7 +2,7 @@
 #A script to read in data files, rotate and regrid them to the same no. of kpc
 #per pixel. It then makes cutouts of each galaxy based on their WCS info and
 #stacks the cutouts to produce one map with all stacked galaxies. -- NB THE
-#FINAL IMAGE IS NOT ACTUALLY STACKED!! - sort your shit out ruth
+#FINAL IMAGE IS NOT ACTUALLY STACKED!!
 
 #-------------------------------------------------------------------------------
 #IMPORT REQUIRED MODULES:
@@ -60,7 +60,7 @@ print source_names[43]
 #map. We want to scale everything to the largest number of kpc per pixel (i.e.
 #the worst resolution):
 wave = [250, 350, 500]
-"""
+
 for num in range(len(source_names)):
     dist = (v_list / 47.37)
     name = source_names[num]
@@ -115,7 +115,7 @@ for num in range(len(source_names)):
                                        '/Rescaled/'+name+'_SPIRE_'+str(wavelength)+'_rescaled_kpc.fits',
                                        header='Rescaled/'+name+'_SPIRE_'+str(wavelength)+'_rescaled_kpc.txt',
                                        silent_cleanup = True)
-"""
+
 #-------------------------------------------------------------------------------
 #MAKE CUT-OUTS OF THE DATA - THE GALAXY AT THE CENTRE
 #-------------------------------------------------------------------------------
